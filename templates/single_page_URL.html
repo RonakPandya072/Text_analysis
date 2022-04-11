@@ -1,0 +1,22 @@
+﻿<!doctype html>
+<html>
+
+<body>
+
+<h1>Single Web-Page Text Analysis</h1>
+<hr>
+{% for table in urldetails_tables %}
+            {{ table|safe }}
+{% endfor %}
+
+
+<hr>
+<p>Click For Detailed Sentence By Sentence Analysis</p>
+
+<form action="/detailed_analysis_URL" method="post">
+  <textarea id="URL_text" name="URL_Text" rows="1" cols="70">{{url_text}}</textarea>   
+  <input type="submit" value="Click" />
+</form>
+
+</body>
+</html>

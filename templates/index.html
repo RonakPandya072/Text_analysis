@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>text_Summarization</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(./static/images/Background.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <h1> Welcome to Text Analysis and Summarization App</h1>
+        <p> Enter the text/URL of news article/ blog post to get detailed summary of text</p>
+        <br>
+        <!---<form method="Post">
+        <p><input type='text' name='url', size='60'></form></p>
+        <div>
+            <button type="button"><span></span>Analyze</button>
+            <button type="button"><span></span>Summarize</button>--->
+        <form action="/single_page_URL" method="post">
+            <label for="single_page"></label>
+            <p> </p>
+            <input type="text" id="Single_URL" name="Single_URL" size="75"><br>
+            <button type="submit" value="Analyse" onclick="$('#loading').show();"><span></span>Analyse</button>
+            <button type="submit" value="Summary" onclick="$('#loading').show();"><span></span><Summary>Summary</button>
+        </form>
+         <form action="/summary" method="post">
+            <label for="summary"></label>
+            <p> </p>
+<!--            <input type="text" id="Single_URL" name="Single_URL" size="75"><br>-->
+<!--            <button type="submit" value="Analyse" onclick="$('#loading').show();"><span></span>Analyse</button>-->
+            <button type="submit" value="Summary" onclick="$('#loading').show();"><span></span><Summary>Summary</button>
+        </form>
+        <!---<hr>
+        <p>or</p>
+        <form action="/" method="post">
+            <input type="text" id="Single_URL" name="Single_URL" size="75"><br>
+            <button type="submit" value="Summarize" onclick="$('#loading').show();"><span></span>Summarize</button>
+        </form>--->
+    </div>
+
+    </div>
+</body>
+
+</html>
